@@ -3,6 +3,12 @@ class Invoice:
     def __init__(self):
         self.items = {}
 
+    def removeProduct(self, productname):
+        return self.items.pop(productname)
+
+    def addAdditionalProduct(self, product):
+        self.items.update(product)
+
     def addProduct(self, qnt, price, discount):
         self.items['qnt'] = qnt
         self.items['unit_price'] = price
